@@ -17,11 +17,11 @@ export async function nativeToEvm(
   } = findoraSdk.Api;
 
   const transactionBuilder = await EvmApi.sendAccountToEvm(
-    nativeWallet, // native wallet
-    '10', // 转账金额
-    await evmWallet.getAddress(), // evm 钱包接收地址
-    assetCode, // 转账资产地址
-    '', // 这里保持空字符串
+    nativeWallet,
+    '10',
+    await evmWallet.getAddress(),
+    assetCode,
+    '',
   );
 
   const handle = await TransactionApi.submitTransaction(transactionBuilder);

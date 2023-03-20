@@ -13,7 +13,6 @@ export async function evmToNativeOfFRC721(
     await findoraSdk.Api.Evm.getPrismConfig();
   const { Evm: EvmApi } = findoraSdk.Api;
 
-  // evm 相关信息
   const webLinkedInfo = {
     privateStr: NETWORK_CONFIG.evmPrivate,
     rpcUrl: NETWORK_CONFIG.evmUrl,

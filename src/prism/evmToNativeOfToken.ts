@@ -13,7 +13,6 @@ export async function evmToNativeOfToken(
     await findoraSdk.Api.Evm.getPrismConfig();
   const { Evm: EvmApi } = findoraSdk.Api;
 
-  // evm 相关信息
   const webLinkedInfo = {
     privateStr: NETWORK_CONFIG.evmPrivate,
     rpcUrl: NETWORK_CONFIG.evmUrl,
@@ -24,17 +23,17 @@ export async function evmToNativeOfToken(
   let txhResult;
   if (assetType === 'FRA') {
     txhResult = await EvmApi.fraToBar(
-      bridgeAddress, // 桥合约地址
-      nativeWallet.address, // native 接收者地址
-      '10', // 转账金额
+      bridgeAddress,
+      nativeWallet.address,
+      '10',
       webLinkedInfo,
     );
   }
 
   if (assetType === 'FRC20') {
     const approveResult = await EvmApi.approveToken(
-      assetCode, // 资产
-      ledgerAddress, // 账本合约地址
+      assetCode,
+      ledgerAddress,
       '10',
       webLinkedInfo,
     );

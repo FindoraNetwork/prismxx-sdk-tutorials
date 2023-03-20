@@ -12,17 +12,17 @@ import { NETWORK_CONFIG } from './config';
 dotenv.config();
 
 async function main() {
-  console.log('初始化SDK...');
+  console.log('Init SDK...');
   await initSdk();
 
   const findoraSdk = await import('@findora-network/findora-sdk.js');
   const { Asset: AssetApi } = findoraSdk.Api;
 
-  console.log('获取钱包信息...');
+  console.log('Get Wallet...');
   const nativeWallet = await getNativeWallet();
   const evmWallet = await getEvmWallet();
 
-  console.log('启动 - Native To Evm');
+  console.log('Run - Native To Evm');
 
   // console.log('1、[send FRA]');
   // await nativeToEvm(nativeWallet, evmWallet, await AssetApi.getFraAssetCode());
@@ -48,7 +48,7 @@ async function main() {
   //   );
   // await nativeToEvm(nativeWallet, evmWallet, frc1155AssetCode);
 
-  console.log('启动 - Evm To Native');
+  console.log('Run - Evm To Native');
 
   // console.log('1、[send FRA]');
   // await evmToNativeOfToken(
@@ -67,12 +67,12 @@ async function main() {
   // );
 
   // console.log('3、[send FRC721]');
-  await evmToNativeOfFRC721(
-    nativeWallet,
-    evmWallet,
-    NETWORK_CONFIG.tokens.FRC721,
-    '0', // tokenID
-  );
+  // await evmToNativeOfFRC721(
+  //   nativeWallet,
+  //   evmWallet,
+  //   NETWORK_CONFIG.tokens.FRC721,
+  //   '0', // tokenID
+  // );
 
   // console.log('4、[send FRC1155]');
   // await evmToNativeOfFRC1155(
@@ -83,7 +83,7 @@ async function main() {
   //   '1', // token amount , nft 1155 的转账数量
   // );
 
-  console.log('结束');
+  console.log('End!');
 }
 
 main().catch((err) => console.log(err.message));
