@@ -1,0 +1,80 @@
+{
+  // stylelint extends its own check
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "/**/public/manifest.dev.json",
+        "/**/public/manifest.prod.json"
+      ],
+      "url": "http://json.schemastore.org/chrome-manifest"
+    }
+  ],
+  // eslint saves automatic formatting
+  "eslint.format.enable": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    // Format css
+    "source.fixAll.stylelint": true
+  },
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.codeAction.disableRuleComment": {
+    "enable": true
+  },
+  "eslint.probe": ["javascript", "javascriptreact"],
+  // Specify which files do not participate in the search
+  "search.exclude": {
+    "**/node_modules": true,
+    "dist": true,
+    "yarn.lock": true,
+    "package-lock": true
+  },
+  // Specify which files are not monitored by VSCode to prevent too many files being scanned when VSCode is started, resulting in high CPU usage
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/dist/**": true
+  },
+  // Configure VScode to use prettier formatter
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
