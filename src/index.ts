@@ -35,16 +35,16 @@ async function main() {
 
   // console.log('3、[send FRC721]');
   // const frc721AssetCode = await findoraSdk.Api.Evm.hashAddressTofraAddressByNFT(
-  //   NETWORK_CONFIG.tokens.FRC721, // evm 上对应的 NFT合约地址
-  //   '1', // evm 上对应的 nft tokenID
+  //   NETWORK_CONFIG.tokens.FRC721,
+  //   '1',
   // );
   // await nativeToEvm(nativeWallet, evmWallet, frc721AssetCode);
 
   // console.log('4、[send FRC1155]');
   // const frc1155AssetCode =
   //   await findoraSdk.Api.Evm.hashAddressTofraAddressByNFT(
-  //     NETWORK_CONFIG.tokens.FRC1155, // evm 上对应的 NFT合约地址
-  //     '0', // evm 上对应的 nft tokenID
+  //     NETWORK_CONFIG.tokens.FRC1155,
+  //     '0',
   //   );
   // await nativeToEvm(nativeWallet, evmWallet, frc1155AssetCode);
 
@@ -80,7 +80,7 @@ async function main() {
   //   evmWallet,
   //   NETWORK_CONFIG.tokens.FRC1155,
   //   '0', // tokenID
-  //   '1', // token amount , nft 1155 的转账数量
+  //   '1', // token amount
   // );
 
   console.log('End!');
